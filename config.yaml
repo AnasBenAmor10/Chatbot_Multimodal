@@ -1,7 +1,7 @@
 ctransformers:
   model_path:
-    small: "models\\mistral-7b-instruct-v0.2.Q3_K_M.gguf"
-    large: "models\\mistral-7b-instruct-v0.2.Q5_K_M.gguf"
+    small: "models\\mistral\\mistral-7b-instruct-v0.2.Q3_K_M.gguf"
+    large: "models\\mistral\\mistral-7b-instruct-v0.2.Q5_K_M.gguf"
 
   model_type: "mistral"
   model_config:
