@@ -64,7 +64,7 @@ To get started with Multimodal Chatbot, clone the repository and follow these si
 > This is a tree of models directory
   
 
-7. **Enter commands in terminal**:
+6. **Enter commands in terminal**:
    1. `python3 database_operations.py` This will initialize the sqlite database for the chat sessions.
    2. `streamlit run app.py`
 
