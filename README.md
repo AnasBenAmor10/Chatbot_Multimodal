@@ -53,8 +53,8 @@ The app incorporates LLaVA for image processing, a fine-tuned LLaMA model design
 
 - **Image Chatting Models Used:**
 
-  - [ggml-model-q5_k.gguf](#https://huggingface.co/mys/ggml_llava-v1.5-7b/blob/main/ggml-model-q5_k.gguf)
-  - [mmproj-model-f16.gguf](#https://huggingface.co/mys/ggml_llava-v1.5-7b/blob/main/mmproj-model-f16.gguf)
+  - [ggml-model-q5_k.gguf](https://huggingface.co/mys/ggml_llava-v1.5-7b/blob/main/ggml-model-q5_k.gguf)
+  - [mmproj-model-f16.gguf](https://huggingface.co/mys/ggml_llava-v1.5-7b/blob/main/mmproj-model-f16.gguf)
 
 ### **3. PDF Chatting with Chroma DB**
 
