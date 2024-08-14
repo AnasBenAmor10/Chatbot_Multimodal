@@ -5,8 +5,8 @@
 - [Overview](#overview)
 - [Features](#features)
 - [Getting Started](#getting-started)
-<!-- - [PDF Retrievel Model Architecteur](#pdf-retrievel-model-architecteur) -->
 - [Result](#result)
+<!-- - [PDF Retrievel Model Architecteur](#pdf-retrievel-model-architecteur) -->
 
 ## Overview
 
@@ -64,11 +64,25 @@ The app incorporates LLaVA for image processing, a fine-tuned LLaMA model design
 
 - **How Chatting with PDF Works**
 
-This system implements an efficient document retrieval and question-answering pipeline. When a PDF is provided, it's converted to text and embedded into vector representations using an Embedding Function. These embeddings are stored in ChromaDB, a vector database optimized for similarity search. User queries undergo the same embedding process and are used to retrieve relevant documents from ChromaDB. The system then combines the original query with the retrieved documents and passes them to a Large Language Model (LLM). The LLM processes this context to generate an informed response based on the PDF's content. This architecture enables quick and accurate responses to questions about extensive document collections, making it ideal for applications requiring intelligent document analysis and interaction.
+  This system implements an efficient document retrieval and question-answering pipeline. When a PDF is provided, it's converted to text and embedded into vector representations using an Embedding Function. These embeddings are stored in ChromaDB, a vector database optimized for similarity search. User queries undergo the same embedding process and are used to retrieve relevant documents from ChromaDB. The system then combines the original query with the retrieved documents and passes them to a Large Language Model (LLM). The LLM processes this context to generate an informed response based on the PDF's content. This architecture enables quick and accurate responses to questions about extensive document collections, making it ideal for applications requiring intelligent document analysis and interaction.
 
 - [Chroma website](https://docs.trychroma.com/)
 
-- **Quantized Model Integration**: The app utilizes "quantized models" optimized for efficient performance on standard consumer hardware. These models are smaller and more efficient versions of their original counterparts, allowing the app to run smoothly without requiring high-end computing resources. In this application, the following quantized models are used:
+### **4. Quantized Model Integration**
+
+The app utilizes "quantized models" optimized for efficient performance on standard consumer hardware. These models are smaller and more efficient versions of their original counterparts, allowing the app to run smoothly without requiring high-end computing resources.
+
+- **Why Choose Mistral?**
+
+  Mistral Large is ideal for complex tasks that require large reasoning capabilities or are highly specialized - like Synthetic Text Generation, Code Generation, RAG, or Agents.
+
+![Mistral](images/Mistral.png)
+
+- **How Mistral Works**
+
+The Mistral model processes your input by breaking it down into tokens and using a **Sliding Window Attention** mechanism to focus on a few tokens at a time, allowing it to handle long text sequences efficiently. With 32 **Transformer Decoder Layers**, the model refines its understanding at each layer, making the output more accurate. The **Feedforward Layer** with **SiLU** activation helps the model highlight important information, while **RMS Norm** ensures that the data is consistently balanced throughout the process. The **Softmax** function then converts the model's understanding into probabilities, allowing it to generate the most likely and coherent response. To maintain speed, Mistral uses a **Rolling Buffer KV Cache**, which remembers parts of the input that have already been processed, making the entire process both fast and efficient.
+
+- **Quantized models Used** :
 
 - [`mistral-7b-instruct-v0.2.Q3_K_M.gguf`](#https://huggingface.co/TheBloke/Mistral-7B-Instruct-v0.1-GGUF/blob/main/mistral-7b-instruct-v0.1.Q3_K_M.gguf)
 - [`mistral-7b-instruct-v0.2.Q5_K_M.gguf`](#https://huggingface.co/TheBloke/Mistral-7B-Instruct-v0.1-GGUF/blob/main/mistral-7b-instruct-v0.1.Q5_K_M.gguf)
