@@ -39,7 +39,7 @@ This architecture outlines a document processing and question-answering system. 
 
 To get started with Multimodal Chatbot, clone the repository and follow these simple steps:
 
-1. **Create a Virtual Environment**: I am using Python 3.11.5 currently `python3.8 -m venv chatbot`
+1. **Create a Virtual Environment**: I am using Python 3.11.5 currently `python3.11 -m venv chatbot`
 
 2. **Activate the Virtual Environment**:`.\chatbot\Scripts\activate `
 
