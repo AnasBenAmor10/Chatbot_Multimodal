@@ -85,8 +85,8 @@ The app utilizes "quantized models" optimized for efficient performance on stand
 
 - **Quantized models Used** :
 
-- [mistral-7b-instruct-v0.2.Q3_K_M.gguf](#https://huggingface.co/TheBloke/Mistral-7B-Instruct-v0.1-GGUF/blob/main/mistral-7b-instruct-v0.1.Q3_K_M.gguf)
-- [mistral-7b-instruct-v0.2.Q5_K_M.gguf](#https://huggingface.co/TheBloke/Mistral-7B-Instruct-v0.1-GGUF/blob/main/mistral-7b-instruct-v0.1.Q5_K_M.gguf)
+- [mistral-7b-instruct-v0.2.Q3_K_M.gguf](https://huggingface.co/TheBloke/Mistral-7B-Instruct-v0.1-GGUF/blob/main/mistral-7b-instruct-v0.1.Q3_K_M.gguf)
+- [mistral-7b-instruct-v0.2.Q5_K_M.gguf](https://huggingface.co/TheBloke/Mistral-7B-Instruct-v0.1-GGUF/blob/main/mistral-7b-instruct-v0.1.Q5_K_M.gguf)
 
   **Note:** These models need to be installed separately for the app to function correctly. Please ensure they are properly set up as per the installation instructions.
 
