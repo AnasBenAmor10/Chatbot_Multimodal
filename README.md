@@ -5,6 +5,7 @@
 - [Overview](#overview)
 - [Features](#features)
 - [Getting Started](#getting-started)
+- [Configuration](#configuration)
 - [Result](#result)
 <!-- - [PDF Retrievel Model Architecteur](#pdf-retrievel-model-architecteur) -->
 
@@ -126,6 +127,57 @@ To get started with Multimodal Chatbot, clone the repository and follow these si
 6. **Enter commands in terminal**:
    1. `python3 database_operations.py` This will initialize the sqlite database for the chat sessions.
    2. `streamlit run app.py` This Will Run the Chatbot App
+
+## Configuration
+
+The `config.yaml` file is used to set up and configure various models and components for processing and interacting with data. Here’s a brief overview of its key sections:
+
+```yaml
+ctransformers:
+  model_path:
+    small: "models\\mistral\\mistral-7b-instruct-v0.2.Q3_K_M.gguf"
+    large: "models\\mistral\\mistral-7b-instruct-v0.2.Q5_K_M.gguf"
+
+  model_type: "mistral"
+  model_config:
+    max_new_tokens: 256
+    temperature: 0.2
+    context_length: 2048
+    gpu_layers: 0 # 32 to put all mistral layers on GPU, might differ for other models
+    threads: -1
+
+chat_config:
+  chat_memory_length: 2
+  number_of_retrieved_documents: 3
+
+pdf_text_splitter:
+  chunk_size: 1024 # number of characters, 1024 roughly equals 256 tokens
+  overlap: 50
+  separators: ["\n", "\n\n"]
+
+llava_model:
+  llava_model_path: "models\\llava\\llava_ggml-model-q5_k.gguf"
+  clip_model_path: "models\\llava\\mmproj-model-f16.gguf"
+
+whisper_model: "openai/whisper-small"
+
+embeddings_path: "BAAI/bge-large-en-v1.5"
+
+chromadb:
+  chromadb_path: "chroma_db"
+  collection_name: "pdfs"
+
+chat_sessions_database_path: "chat_sessions\\chat_sessions.db"
+```
+
+- **ctransformers**: Specifies paths and settings for the Mistral language model, including parameters for token limits, temperature, and GPU usage.
+- **chat_config**: Configures chat settings such as memory length and document retrieval for context.
+- **pdf_text_splitter**: Defines how PDF text is chunked, including chunk size and separators.
+- **llava_model**: Provides paths for the LLAVA model and associated CLIP model.
+- **whisper_model**: Path for the Whisper model used in speech-to-text tasks.
+- **embeddings_path**: Location of pre-trained embeddings for semantic search.
+- **chromadb**: Settings for the Chroma database, including path and collection name.
+- **chat_sessions_database_path**: Path to the database for storing chat session data.
 
 ## Result
 
