@@ -51,14 +51,15 @@ To get started with Multimodal Chatbot, clone the repository and follow these si
 
 - **The project includes the following directory structure for models**:
 models/
-├── ...
-├── mistral/                    
-│   ├── mistral-7b-instruct-v0.2.Q3_K_M.gguf         
-│   └── mistral-7b-instruct-v0.2.Q5_K_M.gguf     
-├── llava/
-│   ├── ggml-model-q5_k.gguf
-│   └── mmproj-model-f16.gguf             
-└── ...
+      .
+      ├── ...
+      ├── mistral/                    
+      │   ├── mistral-7b-instruct-v0.2.Q3_K_M.gguf         
+      │   └── mistral-7b-instruct-v0.2.Q5_K_M.gguf     
+      ├── llava/
+      │   ├── ggml-model-q5_k.gguf
+      │   └── mmproj-model-f16.gguf             
+      └── ...
 
 7. **Enter commands in terminal**:
    1. `python3 database_operations.py` This will initialize the sqlite database for the chat sessions.
