@@ -5,6 +5,7 @@
 - [Overview](#overview)
 - [Features](#features)
 - [Getting Started](#getting-started)
+- [PDF Retrievel Model Architecteur](#pdf-retrievel-model-architecteur)
 - [Result](#result)
 
 ## Overview
@@ -49,16 +50,15 @@ To get started with Multimodal Chatbot, clone the repository and follow these si
 5. **Setting Up Local Models**: Download the models you want to implement. [Here](https://huggingface.co/mys/ggml_llava-v1.5-7b/tree/main) is the llava model I used for image chat (ggml-model-q5_k.gguf and mmproj-model-f16.gguf). And the [quantized mistral model](https://huggingface.co/TheBloke/Mistral-7B-Instruct-v0.1-GGUF/blob/main/mistral-7b-instruct-v0.1.Q5_K_M.gguf) form TheBloke (mistral-7b-instruct-v0.1.Q5_K_M.gguf).
 
 - **The project includes the following directory structure for models**:
-
 models/
-│
-├── mistral/
-│ ├── mistral-7b-instruct-v0.2.Q3_K_M.gguf
-│ └── mistral-7b-instruct-v0.2.Q5_K_M.gguf
-│
-└── llava/
-├── ggml-model-q5_k.gguf
-└── mmproj-model-f16.gguf
+├── ...
+├── mistral/                    
+│   ├── mistral-7b-instruct-v0.2.Q3_K_M.gguf         
+│   └── mistral-7b-instruct-v0.2.Q5_K_M.gguf     
+├── llava/
+│   ├── ggml-model-q5_k.gguf
+│   └── mmproj-model-f16.gguf             
+└── ...
 
 7. **Enter commands in terminal**:
    1. `python3 database_operations.py` This will initialize the sqlite database for the chat sessions.
