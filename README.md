@@ -80,7 +80,7 @@ The app utilizes "quantized models" optimized for efficient performance on stand
 
 - **How Mistral Works**
 
-The Mistral model processes your input by breaking it down into tokens and using a **Sliding Window Attention** mechanism to focus on a few tokens at a time, allowing it to handle long text sequences efficiently. With 32 **Transformer Decoder Layers**, the model refines its understanding at each layer, making the output more accurate. The **Feedforward Layer** with **SiLU** activation helps the model highlight important information, while **RMS Norm** ensures that the data is consistently balanced throughout the process. The **Softmax** function then converts the model's understanding into probabilities, allowing it to generate the most likely and coherent response. To maintain speed, Mistral uses a **Rolling Buffer KV Cache**, which remembers parts of the input that have already been processed, making the entire process both fast and efficient.
+  The Mistral model processes your input by breaking it down into tokens and using a **Sliding Window Attention** mechanism to focus on a few tokens at a time, allowing it to handle long text sequences efficiently. With 32 **Transformer Decoder Layers**, the model refines its understanding at each layer, making the output more accurate. The **Feedforward Layer** with **SiLU** activation helps the model highlight important information, while **RMS Norm** ensures that the data is consistently balanced throughout the process. The **Softmax** function then converts the model's understanding into probabilities, allowing it to generate the most likely and coherent response. To maintain speed, Mistral uses a **Rolling Buffer KV Cache**, which remembers parts of the input that have already been processed, making the entire process both fast and efficient.
 
 - **Quantized models Used** :
 
@@ -125,7 +125,7 @@ To get started with Multimodal Chatbot, clone the repository and follow these si
 
 6. **Enter commands in terminal**:
    1. `python3 database_operations.py` This will initialize the sqlite database for the chat sessions.
-   2. `streamlit run app.py`
+   2. `streamlit run app.py` This Will Run the Chatbot App
 
 ## Result
 
